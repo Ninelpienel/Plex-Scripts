@@ -6,8 +6,8 @@ local utils = require("mp.utils")
 
 -- Define your whitelist and blacklist paths here.
 
-local whitelist = "C:/Users/Mediaplayer/AppData/Local/Plex HTPC/scripts/smart_deband_whitelist.txt"
-local blacklist = "C:/Users/Mediaplayer/AppData/Local/Plex HTPC/scripts/smart_deband_blacklist.txt"
+local whitelist = "C:/Users/<your user>/AppData/Local/Plex HTPC/scripts/smart_deband_whitelist.txt"
+local blacklist = "C:/Users/<your user>/AppData/Local/Plex HTPC/scripts/smart_deband_blacklist.txt"
 
 function deband()
     local media = mp.get_property("user-data/plex/playing-media")
