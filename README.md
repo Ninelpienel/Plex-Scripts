@@ -8,6 +8,8 @@ I'm not really a programmer, but kind of cobbled most of the stuff together and 
 
 This script activates the deband function of mpv if the video is in H.264 8-bit format. In addition, you can add exceptions via a whitelist and blacklist. Since mostly bad encodes or web rips are in H.264 8-bit, the debanding should only be applied to these videos.
 
+I have added a single exception: If the video has 12 ref frames, debanding is not enabled. This primarily affects high quality web rips that have already been cleanly filtered.
+
 ### Step 1
 
 Put [smart_deband.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/smart_deband.lua) in `C:\Users\<your user>\AppData\Local\Plex HTPC\scripts`.
