@@ -27,7 +27,7 @@ local blacklist = "C:/Your/desired/path/smart_deband_blacklist.txt"
 
 ### Step 3
 
-Please put the settings below into your mpv.conf file.
+Put the settings below into your mpv.conf file.
 
 ```
 deband=no
