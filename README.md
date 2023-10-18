@@ -94,6 +94,8 @@ Create a subfolder named `QC` in your screenshot directory. The screenshots with
 
 ### Examples
 
+These screenshots were taken from the same frame.
+
 #### A regular screenshot
 
 ![20231018_19 44 48_Ishuzoku Reviewers - 04 (00 17 21)](https://github.com/Ninelpienel/Plex-Scripts/assets/1890524/5b507f20-e46a-4c63-8c6f-90435a049a08)
