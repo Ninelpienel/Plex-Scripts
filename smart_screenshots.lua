@@ -87,6 +87,8 @@ function qc_screenshot()
     return nil
 end
 
-mp.add_forced_key_binding("ö", "screenshot", screenshot)
-mp.add_forced_key_binding("ü", "screenshot_no_subs", screenshot_no_subs)
-mp.add_forced_key_binding("ä", "qc_screenshot", qc_screenshot)
+-- Define your key bindings here.
+
+mp.add_forced_key_binding("1", "screenshot", screenshot)
+mp.add_forced_key_binding("2", "screenshot_no_subs", screenshot_no_subs)
+mp.add_forced_key_binding("3", "qc_screenshot", qc_screenshot)
