@@ -12,7 +12,7 @@ I have added a single exception: If the video has 12 ref frames, debanding is no
 
 ### Step 1
 
-Put [smart_deband.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/smart_deband.lua) in `C:\Users\<your user>\AppData\Local\Plex HTPC\scripts`.
+Put [smart_deband.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/smart_deband.lua) in `C:\Users\%username%\AppData\Local\Plex HTPC\scripts`.
 
 ### Step 2
 
@@ -37,7 +37,7 @@ deband-range=32
 deband-grain=0
 ```
 
-The file is located in `C:\Users\<your user>\AppData\Local\Plex HTPC`.
+The file is located in `C:\Users\%username%\AppData\Local\Plex HTPC`.
 
 ### Step 4
 
