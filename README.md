@@ -1,4 +1,4 @@
-# My Plex Script Collection
+# My Plex HTPC Script Collection
 
 This is a collection of my personal Plex HTPC scripts.
 
