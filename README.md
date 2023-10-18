@@ -13,5 +13,5 @@ This script activates the deband function of mpv if the video is in H.264 8-bit 
 With this script you can make 3 different types of screenshots.
 
 1. Screenshots with visible subtitles
-2. Screenshot without visible subtitles
-3. Screenshot with visible subtitles and an overlay with the series name, episode number and timestamp
+2. Screenshots without visible subtitles
+3. Screenshots with visible subtitles and an overlay with the series name, episode number and timestamp
