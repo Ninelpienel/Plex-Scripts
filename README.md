@@ -1,1 +1,1 @@
-# PleX-Scripts
+# My Plex Script Collection
