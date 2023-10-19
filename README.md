@@ -116,7 +116,7 @@ These screenshots were taken from the same frame.
 
 ## Dolby Atmos Auto Pass-through
 
-This script activates the audio pass-through when it has detected an Atmos audio track. Since mpv or Plex can't recognize the format directly, it must be marked as Atmos in the track name.
+This script activates the audio pass-through for Dolby Digital Plus and TrueHD when it has detected an Atmos audio track. Since mpv or Plex can't recognize the format directly, it must be marked as Atmos in the track name.
 
 Unfortunately, it does not work perfectly yet. It happens that Plex HTPC freezes or the toggling doesn't work on the first try. Also, the Atmos track must be preselected when opening the file.
 
