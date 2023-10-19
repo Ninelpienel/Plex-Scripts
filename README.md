@@ -8,7 +8,7 @@ I'm not really a programmer, but kind of cobbled most of the stuff together and 
 
 * [Smart Deband](https://github.com/Ninelpienel/Plex-Scripts#smart-deband)
 * [Smart Screenshots](https://github.com/Ninelpienel/Plex-Scripts#smart-screenshots)
-* Dolby Atmos Auto Pass-through (Soon)
+* [Dolby Atmos Auto Pass-through](https://github.com/Ninelpienel/Plex-Scripts#dolby-atmos-auto-pass-through)
 
 ## Smart Deband
 
@@ -113,3 +113,34 @@ These screenshots were taken from the same frame.
 #### A screenshot with informations of the episode and a time stamp
 
 ![20231018_19 44 50_Ishuzoku Reviewers - 04 (00 17 21)](https://github.com/Ninelpienel/Plex-Scripts/assets/1890524/35a4770d-cf96-4be7-a56c-81cf76d4fec1)
+
+## Dolby Atmos Auto Pass-through
+
+This script activates the audio pass-through when it has detected an Atmos audio track. Since mpv or Plex can't recognize the format directly, it must be marked as Atmos in the track name.
+
+Unfortunately, it does not work perfectly yet. It happens that Plex HTPC freezes or the toggling doesn't work on the first try. Also, the Atmos track must be preselected when opening the file.
+
+### Step 1
+
+Put [dolby_atmos.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/dolby_atmos.lua) in `C:\Users\%username%\AppData\Local\Plex HTPC\scripts`.
+
+### Step 2
+
+Put the settings below into your mpv.conf file.
+
+```
+audio-device=wasapi/{benis}
+audio-channels=7.1,5.1,2.1,stereo
+audio-exclusive=yes
+```
+
+The file is located in `C:\Users\%username%\AppData\Local\Plex HTPC`.
+
+You must define your audio output device behind `audio-device=`. You can get the name by running mpv with the following command: `mpv --audio-device=help`.
+
+### Step 3
+
+Disable all audio settings in Plex HTPC. It resets the settings frequently anyway. That's why we defined them in mpf.conf.
+
+![20231019_21 45 39_Plex_HTPC](https://github.com/Ninelpienel/Plex-Scripts/assets/1890524/fd77b3ba-e43d-407d-aeb4-8fbb1fcafe00)
+
