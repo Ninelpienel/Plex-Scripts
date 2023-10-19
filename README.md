@@ -51,7 +51,7 @@ If you put `[Good Encode] Random Anime` in the blacklist, the debanding will not
 
 ## Smart Screenshots
 
-This script will let you take 3 different types of screenshots.
+With this script you can take 3 different types of screenshots. It also inserts the series name, episode number and timestamp into the file name.
 
 1. Regular sceenshots.
 2. Screenshots without subtitles.
