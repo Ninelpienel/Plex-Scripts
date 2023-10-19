@@ -150,5 +150,6 @@ Disable all audio settings in Plex HTPC. It resets them every few days anyway. T
 
 ### To-do
 
-* Add a option to toggle the pass-trough via hotkey
+* Add an option to toggle the pass-trough via hotkey
+* Add that the pass-trough will not stay on when switching the audio track
 * Prevent Plex HTPC from crashing sometimes
