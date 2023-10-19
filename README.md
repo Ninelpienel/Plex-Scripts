@@ -4,6 +4,12 @@ This is a collection of my personal Plex HTPC scripts.
 
 I'm not really a programmer, but kind of cobbled most of the stuff together and tweaked it with ChatGPT. Maybe the scripts are still helpful.
 
+## Overview
+
+* [Smart Deband](https://github.com/Ninelpienel/Plex-Scripts#smart-deband)
+* [Smart Screenshots](https://github.com/Ninelpienel/Plex-Scripts#smart-screenshots)
+* Dolby Atmos Auto Pass-through (Soon)
+
 ## Smart Deband
 
 This script activates the deband function of mpv if the video is in H.264 8-bit format. In addition, you can add exceptions via a whitelist and blacklist. Since mostly bad encodes or web rips are in H.264 8-bit, the debanding should only be applied to these videos.
