@@ -140,7 +140,7 @@ You must define your audio output device behind `audio-device=`. You can get the
 
 ### Step 3
 
-Disable all audio settings in Plex HTPC. It resets the settings frequently anyway. That's why we defined them in mpf.conf.
+Disable all audio settings in Plex HTPC. It resets them every few days anyway. That's why we defined them in mpf.conf.
 
 ![20231019_21 45 39_Plex_HTPC](https://github.com/Ninelpienel/Plex-Scripts/assets/1890524/fd77b3ba-e43d-407d-aeb4-8fbb1fcafe00)
 
