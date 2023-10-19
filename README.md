@@ -114,6 +114,10 @@ These screenshots were taken from the same frame.
 
 ![20231018_19 44 50_Ishuzoku Reviewers - 04 (00 17 21)](https://github.com/Ninelpienel/Plex-Scripts/assets/1890524/35a4770d-cf96-4be7-a56c-81cf76d4fec1)
 
+### To-do
+
+* Add support for movies
+
 ## Dolby Atmos Auto Pass-through
 
 This script activates the audio pass-through for Dolby Digital Plus and TrueHD when it has detected an Atmos audio track. Since mpv or Plex can't recognize the format directly, it must be marked as Atmos in the track name.
@@ -144,3 +148,7 @@ Disable all audio settings in Plex HTPC. It resets them every few days anyway. T
 
 ![20231019_21 45 39_Plex_HTPC](https://github.com/Ninelpienel/Plex-Scripts/assets/1890524/fd77b3ba-e43d-407d-aeb4-8fbb1fcafe00)
 
+### To-do
+
+* Add a option to toggle the pass-trough via hotkey
+* Prevent Plex HTPC from crashing sometimes
