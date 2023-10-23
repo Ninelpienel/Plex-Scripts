@@ -123,7 +123,7 @@ These screenshots were taken from the same frame.
 
 This script activates the audio pass-through for Dolby Digital Plus and TrueHD when it has detected an Atmos audio track. Since mpv or Plex can't recognize the format directly, it must be marked as Atmos in the track name.
 
-Unfortunately, it does not work perfectly yet. It happens that Plex HTPC freezes or the toggling doesn't work on the first try. Also, the Atmos track must be preselected when opening the file.
+Unfortunately, it doesn't work perfectly yet. It happens that Plex HTPC freezes or the toggling doesn't work on the first try. Also, the Atmos track must be preselected when opening the file.
 
 ### Step 1
 
@@ -134,14 +134,16 @@ Put [dolby_atmos.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/dolb
 Put the settings below into your mpv.conf file.
 
 ```
-audio-device=wasapi/{benis}
-audio-channels=7.1,5.1,2.1,stereo
+audio-device=wasapi/"device name"
+audio-channels=auto
 audio-exclusive=yes
 ```
 
 The file is located in `C:\Users\%username%\AppData\Local\Plex HTPC`.
 
-You must define your audio output device behind `audio-device=`. You can get the name by running mpv with the following command: `mpv --audio-device=help`.
+You must define your audio output device behind `audio-device=`. You can get the name by running mpv with the following command: `mpv --audio-device=help`. Don't use the ID of your audio device, use the actual name. Sometimes Windows will change the ID.
+
+If your audio device doesn't support all layouts, you should list them instead: `audio-channels=2.0,5.1,7,1` etc.
 
 ### Step 3
 
