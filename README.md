@@ -154,4 +154,15 @@ Disable all audio settings in Plex HTPC. It resets them every few days anyway. T
 
 * Add an option to toggle the pass-trough via hotkey
 * Add that when switching the audio track it will be checked again if pass-trough should be active
-* Prevent Plex HTPC from crashing sometimes
+
+## Tips
+
+You can also bind functions directly via your input maps! This is particularly helpful if you're using a controller.
+
+### Examples
+
+```json
+"KEY_AXIS_0_UP": "mpv:script-message screenshot_no_subs",
+"KEY_AXIS_0_DOWN": "mpv:script-message qc_screenshot",
+"KEY_AXIS_1_UP": "mpv:script-message screenshot",
+```
