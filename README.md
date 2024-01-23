@@ -9,6 +9,7 @@ I'm not really a programmer, but kind of cobbled most of the stuff together and 
 * [Smart Deband](https://github.com/Ninelpienel/Plex-Scripts#smart-deband)
 * [Smart Screenshots](https://github.com/Ninelpienel/Plex-Scripts#smart-screenshots)
 * [Dolby Atmos Auto Pass-through](https://github.com/Ninelpienel/Plex-Scripts#dolby-atmos-auto-pass-through)
+* [Dolby Vision to HDR10](https://github.com/Ninelpienel/Plex-Scripts#dolby-vision-to-hdr10)
 
 ## Smart Deband
 
@@ -154,6 +155,18 @@ Disable all audio settings in Plex HTPC. It resets them every few days anyway. T
 
 * Add an option to toggle the pass-trough via hotkey
 * Add that when switching the audio track it will be checked again if pass-trough should be active
+
+## Dolby Vision to HDR10
+
+This script converts Dolby Vision Profile 5 to HDR10.
+
+Without this function, Plex cannot switch on HDR mode and displays the video incorrectly.
+
+### Step 1
+
+Put [dolby_vision_to_hdr10.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/dolby_vision_to_hdr10.lua.lua) in `C:\Users\%username%\AppData\Local\Plex HTPC\scripts`.
+
+That's it!
 
 ## Tips
 
