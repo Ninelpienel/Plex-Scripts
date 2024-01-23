@@ -164,7 +164,7 @@ Without this function, Plex cannot switch on HDR mode and displays the video inc
 
 ### Step 1
 
-Put [dolby_vision_to_hdr10.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/dolby_vision_to_hdr10.lua.lua) in `C:\Users\%username%\AppData\Local\Plex HTPC\scripts`.
+Put [dolby_vision_to_hdr10.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/dolby_vision_to_hdr10.lua) in `C:\Users\%username%\AppData\Local\Plex HTPC\scripts`.
 
 That's it!
 
