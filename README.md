@@ -158,7 +158,7 @@ Disable all audio settings in Plex HTPC. It resets them every few days anyway. T
 
 This script converts Dolby Vision Profile 5 to HDR10.
 
-Without this function, Plex cannot switch on HDR mode and displays the video incorrectly.
+Without this function, Plex cannot switch in HDR mode and displays the video incorrectly.
 
 ### Step 1
 
