@@ -1,16 +1,18 @@
--- Smart Screenshots v2.0 by Nino
+-- Smart Screenshots v2.1 by Nino
 -- https://github.com/Ninelpienel/Plex-Scripts
 
 function screenshot()
-    local media, file
+	local media, file
 	
 	timedate = os.date("%Y%m%d_%H.%M.%S")
 	
-    dir = mp.get_property_native("screenshot-directory")
-    if (string.len(dir) > 0) then dir = dir..'/' end
-    dir = mp.command_native({"expand-path", dir})
+	dir = mp.get_property_native("screenshot-directory")
+	if (string.len(dir) > 0) then dir = dir..'/' end
+	dir = mp.command_native({"expand-path", dir})
 	
-    media = mp.get_property("user-data/plex/playing-media")
+	img = mp.get_property_native("screenshot-format")
+	
+	media = mp.get_property("user-data/plex/playing-media")
 	
 	media_typ = media:match('"type":"([%w_]+)","updatedAt"')
 	
@@ -26,7 +28,7 @@ function screenshot()
 		position = mp.get_property_osd("time-pos")
 		positionf=string.gsub(position,"[:]",".")
 	
-		mp.commandv("screenshot-to-file", dir..timedate.."_"..title.." - S"..snumber.."E"..epnumber.." ("..positionf..").png")
+		mp.commandv("screenshot-to-file", dir..timedate.."_"..title.." - S"..snumber.."E"..epnumber.." ("..positionf..")."..img)
 		mp.osd_message('Screenshot created!')
 	end
 	
@@ -37,22 +39,24 @@ function screenshot()
 		position = mp.get_property_osd("time-pos")
 		positionf=string.gsub(position,"[:]",".")
 	
-		mp.commandv("screenshot-to-file", dir..timedate.."_"..title.." ("..positionf..").png")
+		mp.commandv("screenshot-to-file", dir..timedate.."_"..title.." ("..positionf..")."..img)
 		mp.osd_message('Screenshot created!')
 	end
 	return nil
 end
 
 function screenshot_no_subs()
-    local media, file
+	local media, file
 	
 	timedate = os.date("%Y%m%d_%H.%M.%S")
 	
-    dir = mp.get_property_native("screenshot-directory")
-    if (string.len(dir) > 0) then dir = dir..'/' end
-    dir = mp.command_native({"expand-path", dir})
+	dir = mp.get_property_native("screenshot-directory")
+	if (string.len(dir) > 0) then dir = dir..'/' end
+	dir = mp.command_native({"expand-path", dir})
 	
-    media = mp.get_property("user-data/plex/playing-media")
+	img = mp.get_property_native("screenshot-format")
+	
+	media = mp.get_property("user-data/plex/playing-media")
 	
 	media_typ = media:match('"type":"([%w_]+)","updatedAt"')
 	
@@ -68,7 +72,7 @@ function screenshot_no_subs()
 		position = mp.get_property_osd("time-pos")
 		positionf=string.gsub(position,"[:]",".")
 	
-		mp.commandv("screenshot-to-file", dir..timedate.."_"..title.." - S"..snumber.."E"..epnumber.." ("..positionf..").png", "video")
+		mp.commandv("screenshot-to-file", dir..timedate.."_"..title.." - S"..snumber.."E"..epnumber.." ("..positionf..")."..img, "video")
 		mp.osd_message('Screenshot created without subs!')
 	end
 	
@@ -79,25 +83,27 @@ function screenshot_no_subs()
 		position = mp.get_property_osd("time-pos")
 		positionf=string.gsub(position,"[:]",".")
 	
-		mp.commandv("screenshot-to-file", dir..timedate.."_"..title.." ("..positionf..").png", "video")
+		mp.commandv("screenshot-to-file", dir..timedate.."_"..title.." ("..positionf..")."..img, "video")
 		mp.osd_message('Screenshot created without subs!')
 	end
 	return nil
 end
 
 function qc_screenshot()
-    local media, file
+	local media, file
 	local format="{\\an8\\fs18\\bord1.2\\c&HFFFFFF&\\3c&H000074&\\b1}"
 	
 	timedate = os.date("%Y%m%d_%H.%M.%S")
 	
-    dir = mp.get_property_native("screenshot-directory")
-    if (string.len(dir) > 0) then dir = dir..'/' end
-    dir = mp.command_native({"expand-path", dir})
+	dir = mp.get_property_native("screenshot-directory")
+	if (string.len(dir) > 0) then dir = dir..'/' end
+	dir = mp.command_native({"expand-path", dir})
+	
+	img = mp.get_property_native("screenshot-format")
 	
 	qcdir = mp.command_native({"expand-path", dir.."QC/"})
 	
-    media = mp.get_property("user-data/plex/playing-media")
+	media = mp.get_property("user-data/plex/playing-media")
 	
 	media_typ = media:match('"type":"([%w_]+)","updatedAt"')
 	
@@ -117,7 +123,7 @@ function qc_screenshot()
 	
 		mp.osd_message(mp.get_property_osd("osd-ass-cc/0")..msg..mp.get_property_osd("osd-ass-cc/1"), 4)
 		mp.add_timeout(0.1, function()
-			mp.commandv("screenshot-to-file", qcdir..timedate.."_"..titlef.." - S"..snumber.."E"..epnumber.." ("..positionf..").png", "window")
+			mp.commandv("screenshot-to-file", qcdir..timedate.."_"..titlef.." - S"..snumber.."E"..epnumber.." ("..positionf..")."..img, "window")
 		end)
 	end
 	
@@ -132,7 +138,7 @@ function qc_screenshot()
 	
 		mp.osd_message(mp.get_property_osd("osd-ass-cc/0")..msg..mp.get_property_osd("osd-ass-cc/1"), 4)
 		mp.add_timeout(0.1, function()
-			mp.commandv("screenshot-to-file", qcdir..timedate.."_"..titlef.." ("..positionf..").png", "window")
+			mp.commandv("screenshot-to-file", qcdir..timedate.."_"..titlef.." ("..positionf..")."..img, "window")
 		end)
 	end
 	return nil
