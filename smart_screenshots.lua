@@ -140,6 +140,6 @@ end
 
 -- Define your key bindings here.
 
-mp.add_forced_key_binding("ä", "screenshot", screenshot)
-mp.add_forced_key_binding("ö", "screenshot_no_subs", screenshot_no_subs)
-mp.add_forced_key_binding("ü", "qc_screenshot", qc_screenshot)
+mp.add_forced_key_binding("1", "screenshot", screenshot)
+mp.add_forced_key_binding("2", "screenshot_no_subs", screenshot_no_subs)
+mp.add_forced_key_binding("3", "qc_screenshot", qc_screenshot)
