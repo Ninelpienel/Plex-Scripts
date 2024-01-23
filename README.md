@@ -64,8 +64,6 @@ With this script you can take 3 different types of screenshots. It also inserts 
 2. Screenshots without subtitles.
 3. Screenshots with informations of the episode and a time stamp. Pretty nice for QC stuff.
 
-Currently, this only works for series, not for movies.
-
 ### Step 1
 
 Put [smart_screenshots.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/smart_screenshots.lua) in `C:\Users\%username%\AppData\Local\Plex HTPC\scripts`.
@@ -93,7 +91,7 @@ screenshot-directory="C:\Users\User\Documents\Screenshots"
 
 The file is located in `C:\Users\%username%\AppData\Local\Plex HTPC`.
 
-Update the screenshot directory path.
+Update the screenshot format and directory path to your preferences. Both values are important for the script to work.
 
 ### Step 4
 
@@ -117,7 +115,7 @@ These screenshots were taken from the same frame.
 
 ### To-do
 
-* Add support for JPG
+Currently nothing.
 
 ## Dolby Atmos Auto Pass-through
 
@@ -167,6 +165,10 @@ Without this function, Plex cannot switch on HDR mode and displays the video inc
 Put [dolby_vision_to_hdr10.lua](https://github.com/Ninelpienel/Plex-Scripts/blob/main/dolby_vision_to_hdr10.lua) in `C:\Users\%username%\AppData\Local\Plex HTPC\scripts`.
 
 That's it!
+
+### To-do
+
+Currently nothing.
 
 ## Tips
 
