@@ -116,7 +116,6 @@ These screenshots were taken from the same frame.
 
 ### To-do
 
-* Add support for movies
 * Add support for JPG
 
 ## Dolby Atmos Auto Pass-through
