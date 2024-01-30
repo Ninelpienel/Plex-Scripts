@@ -1,4 +1,4 @@
--- Smart Screenshots v2.1 by Nino
+-- Smart Screenshots v2.2 by Nino
 -- https://github.com/Ninelpienel/Plex-Scripts
 
 function screenshot()
@@ -14,9 +14,7 @@ function screenshot()
 	
 	media = mp.get_property("user-data/plex/playing-media")
 	
-	media_typ = media:match('"type":"([%w_]+)","updatedAt"')
-	
-	if media_typ == 'episode' then
+	if string.match(media, '"type":"episode"') then
 		media_cut = media:sub(media:find('grandparentTitle')+19, #media)
 		title = media_cut:sub(0,media_cut:find('guid')-4)
 		title = title:gsub("[%<%>%:%\"%/\\|%?%*]", "")
@@ -32,7 +30,7 @@ function screenshot()
 		mp.osd_message('Screenshot created!')
 	end
 	
-	if media_typ == 'movie' then
+	if string.match(media, '"type":"movie"') then
 		title = media:match(',"title":"([^"]+)","type"') or media:match(',"title":"([^"]+)","titleSort"')
 		title = title:gsub("[%<%>%:%\"%/\\|%?%*]", "")
 		
@@ -58,9 +56,7 @@ function screenshot_no_subs()
 	
 	media = mp.get_property("user-data/plex/playing-media")
 	
-	media_typ = media:match('"type":"([%w_]+)","updatedAt"')
-	
-	if media_typ == 'episode' then
+	if string.match(media, '"type":"episode"') then
 		media_cut = media:sub(media:find('grandparentTitle')+19, #media)
 		title = media_cut:sub(0,media_cut:find('guid')-4)
 		title = title:gsub("[%<%>%:%\"%/\\|%?%*]", "")
@@ -76,7 +72,7 @@ function screenshot_no_subs()
 		mp.osd_message('Screenshot created without subs!')
 	end
 	
-	if media_typ == 'movie' then
+	if string.match(media, '"type":"movie"') then
 		title = media:match(',"title":"([^"]+)","type"') or media:match(',"title":"([^"]+)","titleSort"')
 		title = title:gsub("[%<%>%:%\"%/\\|%?%*]", "")
 		
@@ -105,9 +101,7 @@ function qc_screenshot()
 	
 	media = mp.get_property("user-data/plex/playing-media")
 	
-	media_typ = media:match('"type":"([%w_]+)","updatedAt"')
-	
-	if media_typ == 'episode' then
+	if string.match(media, '"type":"episode"') then
 		media_cut = media:sub(media:find('grandparentTitle')+19, #media)
 		title = media_cut:sub(0,media_cut:find('guid')-4)
 		titlef = title:gsub("[%<%>%:%\"%/\\|%?%*]", "")
@@ -127,7 +121,7 @@ function qc_screenshot()
 		end)
 	end
 	
-	if media_typ == 'movie' then
+	if string.match(media, '"type":"movie"') then
 		title = media:match(',"title":"([^"]+)","type"') or media:match(',"title":"([^"]+)","titleSort"')
 		titlef = title:gsub("[%<%>%:%\"%/\\|%?%*]", "")
 		
